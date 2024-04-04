@@ -1,0 +1,413 @@
+@import url('https://fonts.googleapis.com/css2?family=Rakkas&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root{
+  --color: linear-gradient(0deg, transparent, rgb(147, 144, 144,.2))
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Rakkas", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.movie {
+  width: 92%;
+  height: 90%;
+
+  display: flex;
+}
+.movie .right, .left {
+  width: 80%;
+  height: 100%;
+  position: relative;
+}
+.movie .right{
+  width: 30%;
+  background: rgb(38, 38, 38);
+}
+.movie .right img{
+  width: 100%;
+
+}
+.movie .right .video{
+  position: relative;
+  left: 44%;
+  bottom: 3%;
+  background: red;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: black;
+  box-shadow: 0px 0px 20px orangered;
+  transition: .3s linear;
+  cursor: pointer;
+}
+.video i{
+  right: 50%;
+  left: 50%;
+}
+.movie .right .video:hover{
+  transform: rotate(360deg);
+}
+.right .contain {
+  color: brown;
+  padding: 0 20px;
+}
+
+.right .contain h5{
+  font-size: 18px;
+}
+.right .contain p{
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.movie .left{
+  padding: 10px 40px;
+  background: unset;
+}
+.movie .left::before{
+  position: absolute;
+  content:'';
+  width: 95%;
+  height: 250px;
+  background: url("assets/images/back-shaitaan.jpg") no-repeat center -80px/cover;
+  z-index: -10;
+  border-radius: 20px;
+}
+.movie .left::after{
+  position: absolute;
+  content:'';
+  width: 95%;
+  height: 200px;
+  top: 0;
+  background: linear-gradient(0deg , transparent, black);
+  z-index: -10;
+  border-radius: 20px;
+}
+
+.movie .left .head_time{
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.movie .left .head_time::before{
+  content: '';
+  position: absolute;
+  width: 150px;
+  height: 250px;
+  background: linear-gradient(90deg , transparent, black);
+  right: -25px;
+  z-index: -9;
+}
+.movie .left .head_time::after{
+  content: '';
+  position: absolute;
+  width: 150px;
+  height: 250px;
+  background: linear-gradient(270deg , transparent, black);
+  left: -25px;
+  z-index: -9;
+}
+.movie .left .head_time h1{
+  font-size: 50px;
+  color: brown;
+  font-weight: 600;
+}
+.movie .left .head_time .time{
+  color: wheat;
+  display: flex;
+  align-items: center;
+}
+.movie .left .head_time .time h6{
+  font-size: 16px;
+  margin-right: 15px;
+}
+.movie .left .head_time .time h6 i {
+  margin-right: 5px;
+}
+.movie .left .head_time .time button {
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 2px solid red;
+  color: bisque;
+  background: transparent;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: .3sec linear;
+}
+.movie .left .head_time .time button:hover {
+background: red;
+}
+.movie .left .date_type{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.movie .left .date_type .right_card , .left_card{
+  width: 45%;
+} 
+.movie .left .date_type::before{
+  content: '';
+  position: absolute;
+  width: 102%;
+  height: 210px;
+  left: -15px;
+  top: 0;
+  background: linear-gradient(180deg, transparent, black);
+  z-index: -9;
+} 
+.movie .left .title{
+  color:bisque;
+}
+.movie .left  .crd{
+  width: 100%;
+  overflow-x: auto;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  border-top: 1px solid brown;
+  padding: 5px 0;
+}
+.movie .left .crd::-webkit-scrollbar{
+  height: 3px;
+  background: rgb(184,184,184,.2);
+}
+.movie .left .crd::-webkit-scrollbar-thumb{
+  height: 3px;
+  background: rgb(184,184,184,.5);
+}
+.movie .left .crd li{
+  list-style: none;
+  font-size: 20px;
+  color: azure;
+  min-width: 40px;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: coloumn;
+  cursor: pointer;
+}
+.movie .left .right_card .crd li h6:nth-child(2){
+  background: transparent;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 5px;
+  transition: .3s linear;
+}
+.movie .left .right_card .crd li h6:nth-child(2):hover {
+  background: red;
+}
+.movie .left .left_card .crd li h6:nth-last-child(2){
+  background: transparent;
+  height: unset;
+  width: unset;
+  border-radius: 10%;
+  padding: 1px 5px 0px 5px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: .3s linear;
+}
+.movie .left .left_card .crd li h6:nth-last-child(1){
+  background: transparent;
+  height: unset;
+  width: unset;
+  border-radius: 10%;
+  padding: 1px 5px 0px 5px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: .3s linear;
+}
+.movie .left .left_card .crd li h6:nth-last-child(1):hover{
+  background: red;
+}
+.h6_active{
+  background: red !important;
+}
+.movie .left .screen{
+  position: relative;
+  width: 100%;
+  border-top: 3px solid wheat;
+  margin-top: 80px;
+  border-radius: 20%;
+  height: 100px;
+  overflow: hidden;
+  box-shadow: inset 0px 10px 20px var(--color);
+  text-align: center;
+  padding-top: 15px;
+  color: white;
+  letter-spacing: 5px;
+  font-size: 19px;
+}
+.movie .left .screen::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 20px white;
+  top: -20px;
+  left: 0px;
+}
+.movie .left .chair{
+  width: 97%;
+  margin: auto;
+}
+.movie .left .chair .row{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  margin: 15px;
+}
+.movie .left .chair .row li{
+  position: relative;
+  width: 20px;
+  height: 15px;
+  background: white;
+  color: brown;
+  list-style: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: .3s linear;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.movie .left .chair .row li::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background: white;
+  bottom: -8px;
+  border-radius: 10px;
+}
+.movie .left .chair .row li:hover{
+  background: greenyellow;
+  color: red;
+}
+.movie .left .chair .row li:nth-child(7){
+  margin-right: 50px;
+}
+.movie .left .chair .row li:nth-last-child(7){
+  margin-left: 50px;
+}
+.movie .left .chair .row span{
+  color: white;
+  font-weight: 600;
+  font-size: 11px;
+}
+.movie .left .chair .booked{
+  background: red !important;
+  color: black !important;
+}
+.movie .left .chair .selected{
+  background: greenyellow !important;
+}
+.movie .left .details{
+  width: 100%;
+  margin: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.movie .left .details .chair-det{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.movie .left .details .chair-det li{
+  position: relative;
+  list-style-type: none;
+  border-radius: 5px;
+  transition: .3s linear;
+  margin: 0 25px;
+  font-weight: 600;
+  font-size: 15px;
+  color: white;
+}
+.movie .left .details .chair-det li::before{
+  position: absolute;
+  content: '';
+  width: 20px;
+  height: 15px;
+  left: -30px;
+  top:2px;
+  background: white;
+  border-radius: 5px;
+  transition: .3s linear;
+}
+.movie .left .details .chair-det li::after{
+  position: absolute;
+  content: '';
+  width: 20px;
+  height: 4px;
+  left: -30px;
+  bottom:-5px;
+  background: white;
+  border-radius: 10px;
+  transition: .3s linear;
+}
+.movie .left .details .chair-det li:nth-child(2)::before{
+  background: greenyellow;
+}
+.movie .left .details .chair-det li:nth-child(2)::after{
+  background: greenyellow;
+}
+.movie .left .details .chair-det li:nth-child(3)::before{
+  background: red;
+}
+.movie .left .details .chair-det li:nth-child(3)::after{
+  background: red;
+}
+.movie .left video{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -8;
+  display: none;
+}
+.movie .left .book_ticket{
+  position: absolute;
+  right: 5%;
+  bottom: 40px;
+  padding: 8px 9.5px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  background: #fd6565;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+  transition: .3s linear;
+}
+.movie .left .book_ticket:hover{
+  color: red;
+}
